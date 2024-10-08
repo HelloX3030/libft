@@ -1,5 +1,7 @@
 .DS_Store
-*.txt
+# *.txt
+# *.pdf
+# *.md
 
 # Prerequisites
 *.d

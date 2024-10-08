@@ -7,13 +7,8 @@ int	ft_isalpha(int c)
 		|| (c >= 'a' && c <= 'z'));
 }
 
-// void test(int c)
-// {
-// 	printf("%c: %d\n", c, ft_isalpha(c));
-// }
-
 // int main(void)
 // {
 // 	for (int i = 0; i < 127; i++)
-// 		test(i);
+// 		printf("%c: %d\n", c, ft_isalpha(c));
 // }
