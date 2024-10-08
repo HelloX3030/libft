@@ -6,18 +6,18 @@
 /*   By: lseeger <lseeger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:49:05 by lseeger           #+#    #+#             */
-/*   Updated: 2024/10/08 09:50:45 by lseeger          ###   ########.fr       */
+/*   Updated: 2024/10/08 12:31:04 by lseeger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <printf.h>
-#include <stdio.h>
 
 int	ft_isalpha(int c)
 {
 	return ((c >= 'A' && c <= 'Z')
 		|| (c >= 'a' && c <= 'z'));
 }
+
+// #include <printf.h>
+// #include <stdio.h>
 
 // int main(void)
 // {

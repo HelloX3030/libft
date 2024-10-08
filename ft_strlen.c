@@ -6,12 +6,11 @@
 /*   By: lseeger <lseeger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:50:01 by lseeger           #+#    #+#             */
-/*   Updated: 2024/10/08 10:01:49 by lseeger          ###   ########.fr       */
+/*   Updated: 2024/10/08 12:33:04 by lseeger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <printf.h>
 
 size_t	ft_strlen(const char *s)
 {
@@ -23,7 +22,9 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-// static void    test(const char* c)
+// #include <printf.h>
+
+// void    test(const char* c)
 // {
 //     printf("%s: %ld\n", c, ft_strlen(c));
 // }

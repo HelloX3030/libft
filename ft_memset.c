@@ -6,25 +6,25 @@
 /*   By: lseeger <lseeger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:49:48 by lseeger           #+#    #+#             */
-/*   Updated: 2024/10/08 10:51:40 by lseeger          ###   ########.fr       */
+/*   Updated: 2024/10/08 12:32:33 by lseeger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-    unsigned char   *ptr;
-    size_t          i;
+	unsigned char	*ptr;
+	size_t			i;
 
-    ptr = (unsigned char *) s;
-    i = 0;
-    while (i < n)
-    {
-        ptr[i] = (unsigned char) c;
-        i++;
-    }
-    return (s);
+	ptr = (unsigned char *) s;
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = (unsigned char) c;
+		i++;
+	}
+	return (s);
 }
 
 // #include <string.h>
@@ -39,7 +39,8 @@ void *ft_memset(void *s, int c, size_t n)
 //         return;
 //     strcpy(buffer, s);
 //     ft_memset(buffer, c, n);
-//     printf("Original: %s, Character to set: '%c', Length: %ld, Modified: %s\n",
+//     printf("Original: %s, Character to set: '%c', 
+//          Length: %ld, Modified: %s\n",
 //            s, c, n, buffer);
 //     free(buffer);
 // }

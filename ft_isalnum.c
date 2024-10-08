@@ -6,20 +6,17 @@
 /*   By: lseeger <lseeger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:48:23 by lseeger           #+#    #+#             */
-/*   Updated: 2024/10/08 11:00:15 by lseeger          ###   ########.fr       */
+/*   Updated: 2024/10/08 12:30:47 by lseeger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <printf.h>
-
-#include "ft_isalpha.c"
-#include "ft_isdigit.c"
 
 int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }
+
+// #include <stdio.h>
+// #include <printf.h>
 
 // int main(void)
 // {
