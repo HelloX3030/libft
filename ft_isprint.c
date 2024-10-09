@@ -6,7 +6,7 @@
 /*   By: lseeger <lseeger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:49:31 by lseeger           #+#    #+#             */
-/*   Updated: 2024/10/09 11:36:13 by lseeger          ###   ########.fr       */
+/*   Updated: 2024/10/09 15:19:08 by lseeger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,3 @@ int	ft_isprint(int c)
 {
 	return (c >= ' ' && c < 127);
 }
-
-// int main(void)
-// {
-//     for (int i = 0; i <= 127; i++)
-//         printf("%c: %i\n", i, ft_isprint(i));
-// }
