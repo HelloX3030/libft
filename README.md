@@ -3,6 +3,7 @@
 - ft_isprint überprüfen 
 strlcpy
 strlcat
+strnstr
 
 # Ideen 
 - git remote set-url origin <url> 
