@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lseeger <lseeger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 09:48:23 by lseeger           #+#    #+#             */
-/*   Updated: 2024/10/09 12:50:53 by lseeger          ###   ########.fr       */
+/*   Created: 2024/10/09 14:46:01 by lseeger           #+#    #+#             */
+/*   Updated: 2024/10/09 15:11:05 by lseeger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	const char	needle = (const char)c;
+	int			i;
+
+	i = ft_strlen(s);
+	if (i == 0)
+		return ((char *)(&s[i]));
+	while (i >= 0 && s[i] != needle)
+		i--;
+	return ((char *)(&s[i]));
 }
