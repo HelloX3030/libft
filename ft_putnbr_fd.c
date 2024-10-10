@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 12:51:37 by lseeger           #+#    #+#             */
-/*   Updated: 2024/10/10 08:22:36 by hello_x          ###   ########.fr       */
+/*   Created: 2024/10/10 15:14:43 by hello_x           #+#    #+#             */
+/*   Updated: 2024/10/10 15:27:53 by hello_x          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
+#include <limits.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void ft_putnbr_fd(int n, int fd)
 {
-	unsigned char	*dest_ptr;
-	unsigned char	*src_ptr;
-	size_t			i;
-
-	if (dest == NULL && src == NULL)
-		return (dest);
-	dest_ptr = (unsigned char *) dest;
-	src_ptr = (unsigned char *) src;
-	i = 0;
-	while (i < n)
+	if (n == INT_MIN)
 	{
-		dest_ptr[i] = src_ptr[i];
-		i++;
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	return (dest);
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		n *= -1;
+	}
+	if (n <= 9)
+		write(fd, &"0123456789"[n], 1);
+	else
+	{
+		ft_putnbr_fd(n / 10, fd);
+		write(fd, &"0123456789"[n % 10], 1);
+	}
+}
+
+int	main(void)
+{
+	ft_putnbr_fd(-1234567890, 1);
 }
