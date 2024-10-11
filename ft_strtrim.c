@@ -6,7 +6,7 @@
 /*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 10:23:00 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/10 10:57:20 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:16:29 by hello_x          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static bool	char_in_set(const char c, const char *set)
 	return (false);
 }
 
-static int get_start(const char *s1, const char *set)
+static int	get_start(const char *s1, const char *set)
 {
 	int	i;
 
@@ -35,7 +35,7 @@ static int get_start(const char *s1, const char *set)
 	return (i);
 }
 
-static int get_end(const char *s1, const char *set, int start)
+static int	get_end(const char *s1, const char *set, int start)
 {
 	int			i;
 
@@ -58,7 +58,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (new_str == NULL)
 		return (NULL);
 	i = -1;
-	while (++i < end -start)
+	while (++i < end - start)
 		new_str[i] = s1[i + start];
 	new_str[i] = 0;
 	return (new_str);

@@ -6,7 +6,7 @@
 /*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 10:58:35 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/10 13:44:17 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:11:47 by hello_x          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static bool	custom_copy(const char *s, char len, char **strs, int strs_i)
 	return (true);
 }
 
-char 	**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**strs;
 	int		strs_i;

@@ -6,11 +6,11 @@
 /*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:47:40 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/10 15:04:32 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:17:13 by hello_x          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 

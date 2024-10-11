@@ -6,18 +6,18 @@
 /*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 08:47:45 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/10 10:17:24 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:15:53 by hello_x          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    const int	len1 = ft_strlen(s1);
+	const int	len1 = ft_strlen(s1);
 	const int	len2 = ft_strlen(s2);
-    char*		new_str;
+	char		*new_str;
 	int			i;
 	int			j;
 

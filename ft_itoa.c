@@ -6,7 +6,7 @@
 /*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 13:45:08 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/10 14:28:07 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:17:37 by hello_x          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	get_int_len(int n)
 	return (len);
 }
 
-char*	 ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	const int	int_len = get_int_len(n);
 	char		*str;
