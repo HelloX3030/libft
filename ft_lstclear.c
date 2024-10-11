@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 08:33:01 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/11 11:41:48 by hello_x          ###   ########.fr       */
+/*   Created: 2024/10/11 12:15:38 by hello_x           #+#    #+#             */
+/*   Updated: 2024/10/11 12:24:02 by hello_x          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+static void	clear_helper(t_list *lst, void (*del)(void*))
 {
-	unsigned char	*new_memory;
-	size_t			i;
-
-	new_memory = malloc(nmemb * size);
-	i = 0;
-	while (i < size)
+	if (lst->next == NULL)
+		ft_lstdelone(lst, del);
+	else
 	{
-		new_memory[i] = 0;
-		i++;
+		clear_helper(lst->next, del);
+		ft_lstdelone(lst, del);
 	}
-	return (new_memory);
+}
+
+void	ft_lstclear(t_list **lst, void (*del)(void*))
+{
+	clear_helper(*lst, del);
+	*lst = NULL;
 }

@@ -6,11 +6,12 @@
 /*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 08:37:53 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/10 08:38:30 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/11 11:43:45 by hello_x          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

@@ -6,7 +6,7 @@
 /*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:25:04 by lseeger           #+#    #+#             */
-/*   Updated: 2024/10/11 11:16:44 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/11 12:54:51 by hello_x          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,19 @@ void	*ft_calloc(size_t nmemb, size_t size);
 char	**ft_split(char const *s, char c);
 int		ft_isalpha(int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+
+// Bonus
+typedef struct	s_list
+{
+	void *content;
+	struct s_list *next;
+}	t_list;
+
+t_list	*ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
+t_list *ft_lstlast(t_list *lst);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstclear(t_list **lst, void (*del)(void*));
 
 #endif

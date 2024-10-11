@@ -6,7 +6,7 @@
 /*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 08:32:21 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/11 10:11:21 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/11 11:43:21 by hello_x          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	const int	needle_len = ft_strlen(needle);
-	int			i;
-	int			j;
+	const size_t	needle_len = ft_strlen(needle);
+	size_t			i;
+	size_t			j;
 
 	if (ft_strlen(needle) == 0)
 		return ((char *)haystack);
