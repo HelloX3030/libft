@@ -9,3 +9,5 @@
 ls *.c | xargs
 // All Files die nicht mit ft_ starten, nützlich um zu sehen ob man etwas bei der Namensgebung von files falsch gemacht hat 
 ls | grep -v '^ft_'
+
+- malloc fails checks 

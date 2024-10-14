@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lseeger <lseeger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 10:23:00 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/11 10:16:29 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/14 17:46:47 by lseeger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdbool.h>
-#include <stdlib.h>
 
 static bool	char_in_set(const char c, const char *set)
 {
@@ -37,7 +35,7 @@ static int	get_start(const char *s1, const char *set)
 
 static int	get_end(const char *s1, const char *set, int start)
 {
-	int			i;
+	int	i;
 
 	i = ft_strlen(s1);
 	while (i > start && char_in_set(s1[i - 1], set))

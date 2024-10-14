@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lseeger <lseeger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 08:37:53 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/14 17:46:55 by lseeger          ###   ########.fr       */
+/*   Created: 2024/10/14 17:38:24 by lseeger           #+#    #+#             */
+/*   Updated: 2024/10/14 18:07:22 by lseeger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned long	s_len = ft_strlen(s);
-	char				*new_str;
+	const unsigned char	*s_ptr = (unsigned char *)s;
+	const unsigned char	c_test = (unsigned char)c;
 	size_t				i;
 
-	if (s == NULL || start >= ft_strlen(s))
-		return (ft_strdup(""));
-	if (s_len <= start + len)
-		new_str = malloc(sizeof(char) * (s_len - start + 1));
-	else
-		new_str = malloc(sizeof(char) * (len + 1));
-	if (new_str == NULL)
-		return (NULL);
 	i = 0;
-	while (i < len && s[start + i])
+	while (i < n)
 	{
-		new_str[i] = s[start + i];
+		if (s_ptr[i] == c_test)
+			return ((void *)(&s_ptr[i]));
 		i++;
 	}
-	new_str[i] = 0;
-	return (new_str);
+	return (NULL);
 }

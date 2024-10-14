@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lseeger <lseeger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 10:58:35 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/11 10:11:47 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/14 17:44:56 by lseeger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdbool.h>
+#include "libft.h"
 
 static int	get_c_dif(const char *s, char c)
 {
@@ -26,8 +24,8 @@ static int	get_c_dif(const char *s, char c)
 
 static int	get_str_count(const char *s, char c)
 {
-	int		count;
-	int		dif;
+	int	count;
+	int	dif;
 
 	count = 0;
 	while (*s != 0)
@@ -44,9 +42,9 @@ static int	get_str_count(const char *s, char c)
 	return (count);
 }
 
-static bool	custom_copy(const char *s, char len, char **strs, int strs_i)
+static bool	custom_copy(const char *s, int len, char **strs, int strs_i)
 {
-	int		i;
+	int	i;
 
 	strs[strs_i] = malloc(sizeof(char) * (len + 1));
 	if (strs[strs_i] == NULL)
@@ -69,7 +67,7 @@ char	**ft_split(char const *s, char c)
 	int		strs_i;
 	int		dif;
 
-	strs = malloc(sizeof(char *) * get_str_count(s, c) + 1);
+	strs = malloc(sizeof(char *) * (get_str_count(s, c) + 1));
 	if (strs == NULL)
 		return (NULL);
 	strs_i = 0;
@@ -91,12 +89,12 @@ char	**ft_split(char const *s, char c)
 
 // int	main(void)
 // {
-// 	const char *s = "A B AA";
+// 	const char	*s = "AA";
 // 	char		c;
 // 	char		**strs;
 // 	int			i;
 
-// 	c = ' ';
+// 	c = 'z';
 // 	strs = ft_split(s, c);
 // 	if (strs == NULL)
 // 		return (1);

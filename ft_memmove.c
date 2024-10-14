@@ -6,14 +6,14 @@
 /*   By: lseeger <lseeger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 09:42:45 by lseeger           #+#    #+#             */
-/*   Updated: 2024/10/14 10:30:32 by lseeger          ###   ########.fr       */
+/*   Updated: 2024/10/14 17:43:16 by lseeger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 static void	forward_cpy(unsigned char *dst, const unsigned char *src,
-						size_t len)
+		size_t len)
 {
 	size_t	i;
 
@@ -26,7 +26,7 @@ static void	forward_cpy(unsigned char *dst, const unsigned char *src,
 }
 
 static void	backward_cpy(unsigned char *dst, const unsigned char *src,
-						size_t len)
+		size_t len)
 {
 	size_t	i;
 

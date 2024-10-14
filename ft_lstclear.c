@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lseeger <lseeger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 12:15:38 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/11 12:24:02 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/14 17:29:54 by lseeger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	clear_helper(t_list *lst, void (*del)(void*))
+static void	clear_helper(t_list *lst, void (*del)(void *))
 {
+	if (lst == NULL)
+		return ;
 	if (lst->next == NULL)
 		ft_lstdelone(lst, del);
 	else
@@ -23,7 +25,7 @@ static void	clear_helper(t_list *lst, void (*del)(void*))
 	}
 }
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	clear_helper(*lst, del);
 	*lst = NULL;

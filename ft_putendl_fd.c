@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lseeger <lseeger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 15:11:48 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/11 10:12:05 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/14 17:44:02 by lseeger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 #include "libft.h"
 

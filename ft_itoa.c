@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lseeger <lseeger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 13:45:08 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/11 10:17:37 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/14 17:41:40 by lseeger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 static int	get_int_len(int n)
 {
@@ -37,6 +36,8 @@ char	*ft_itoa(int n)
 	char		*str;
 	int			i;
 
+	if (n == INT_MIN)
+		return (ft_strdup("-2147483648"));
 	str = malloc(sizeof(char) * (int_len + 1));
 	if (str == NULL)
 		return (NULL);
