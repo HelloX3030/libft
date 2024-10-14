@@ -6,7 +6,7 @@
 /*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 15:09:15 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/11 10:16:55 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/14 08:27:33 by hello_x          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putstr_fd(char *s, int fd)
 	write(fd, s, ft_strlen(s));
 }
 
-int	main(void)
-{
-	ft_putstr_fd("ABC", 1);
-}
+// int	main(void)
+// {
+// 	ft_putstr_fd("ABC", 1);
+// }

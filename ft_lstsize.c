@@ -6,13 +6,13 @@
 /*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 12:02:22 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/11 12:04:39 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/14 08:09:03 by hello_x          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	count;
 

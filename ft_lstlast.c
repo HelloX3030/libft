@@ -6,13 +6,13 @@
 /*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 12:04:53 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/11 12:08:53 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/14 08:09:52 by hello_x          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	while (lst->next != NULL)
 		lst = lst->next;

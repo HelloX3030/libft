@@ -6,7 +6,7 @@
 /*   By: hello_x <hello_x@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 09:47:10 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/11 10:13:53 by hello_x          ###   ########.fr       */
+/*   Updated: 2024/10/14 08:28:26 by hello_x          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,17 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (i + j);
 }
 
-int	main(void)
-{
-	const char		*src = "ABC";
-	const size_t	dst_size = 20;
-	char			*dst;
+// int	main(void)
+// {
+// 	const char		*src = "ABC";
+// 	const size_t	dst_size = 20;
+// 	char			*dst;
 
-	dst = malloc(sizeof(char) * dst_size);
-	ft_strlcpy(dst, "Moin", dst_size);
-	printf("%s + %s: ", dst, src);
-	ft_strlcat(dst, src, dst_size);
-	printf("%s\n", dst);
-	free(dst);
-	return (0);
-}
+// 	dst = malloc(sizeof(char) * dst_size);
+// 	ft_strlcpy(dst, "Moin", dst_size);
+// 	printf("%s + %s: ", dst, src);
+// 	ft_strlcat(dst, src, dst_size);
+// 	printf("%s\n", dst);
+// 	free(dst);
+// 	return (0);
+// }
