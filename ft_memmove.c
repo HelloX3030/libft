@@ -6,25 +6,45 @@
 /*   By: lseeger <lseeger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 09:42:45 by lseeger           #+#    #+#             */
-/*   Updated: 2024/10/09 13:27:01 by lseeger          ###   ########.fr       */
+/*   Updated: 2024/10/14 10:30:32 by lseeger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
+static void	forward_cpy(unsigned char *dst, const unsigned char *src,
+						size_t len)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < len)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+}
+
+static void	backward_cpy(unsigned char *dst, const unsigned char *src,
+						size_t len)
+{
+	size_t	i;
+
+	i = len;
+	while (i > 0)
+	{
+		--i;
+		dst[i] = src[i];
+	}
+}
+
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*dst_ptr;
-	unsigned char	*src_ptr;
-	size_t			i;
-
-	if (len <= 0 || dst == src)
+	if (dst == src || len <= 0)
 		return (dst);
-	dst_ptr = (unsigned char *)dst;
-	src_ptr = (unsigned char *)src;
-	i = len;
-	while (--i > 0)
-		dst_ptr[i] = src_ptr[i];
-	dst_ptr[i] = src_ptr[i];
+	if (dst > src)
+		backward_cpy(dst, src, len);
+	else
+		forward_cpy(dst, src, len);
 	return (dst);
 }
