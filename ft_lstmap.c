@@ -6,7 +6,7 @@
 /*   By: lseeger <lseeger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 12:44:45 by hello_x           #+#    #+#             */
-/*   Updated: 2024/10/14 18:28:17 by lseeger          ###   ########.fr       */
+/*   Updated: 2024/10/14 18:30:02 by lseeger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (lst == NULL)
 		return (NULL);
-	new_lst = create_start(lst, f, del);
+	new_lst = create_node(lst, f, del);
 	if (new_lst == NULL)
 		return (NULL);
 	lst = lst->next;
