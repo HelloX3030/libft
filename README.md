@@ -1,13 +1,3 @@
-# Todo 
-- subject files + .gitignore + test.txt aus Repository entfernen 
+# Purpose
 
-
-# Ideen 
-- git remote set-url origin <url> 
-
-// Alle C-Files in einer Line ohne tabs als seperator, nützlich für das Makefile 
-ls *.c | xargs
-// All Files die nicht mit ft_ starten, nützlich um zu sehen ob man etwas bei der Namensgebung von files falsch gemacht hat 
-ls | grep -v '^ft_'
-
-- malloc fails checks 
+This is my implementation of the first project of the 42 coding school core curriculum. There are some things that I would have done now different, and some minor issues, e. g. wrong file names for the bonus tasks, but its extensively tested. The Repository contains both the mandatory part and the bonus tasks. 
