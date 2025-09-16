@@ -26,6 +26,7 @@ char				*ft_strchr(const char *s, int c);
 void				ft_putstr_fd(char *s, int fd);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+int					ft_strcmp(char *s1, char *s2);
 int					ft_isalnum(int c);
 size_t				ft_strlen(const char *s);
 void				ft_putchar_fd(char c, int fd);
